@@ -16,7 +16,7 @@ public class Main {
         System.out.println(book1.getYear() + " год");
         System.out.println();
 
-        Book tur = new Book("Записки охотника", turgenev, 1852);
+        Book book2 = new Book("Записки охотника", turgenev, 1852);
         System.out.println(tur.title);
         System.out.println(tur.author);
         System.out.println(tur.year + " год");
