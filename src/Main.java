@@ -17,9 +17,9 @@ public class Main {
         System.out.println();
 
         Book book2 = new Book("Записки охотника", turgenev, 1852);
-        System.out.println(tur.title);
-        System.out.println(tur.author);
-        System.out.println(tur.year + " год");
+        System.out.println(book2.title);
+        System.out.println(book2.author);
+        System.out.println(book2.year + " год");
     }
 
 
