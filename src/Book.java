@@ -2,11 +2,13 @@ import java.util.Objects;
 
 public class Book {
     private String title;
-    private Main.Author author;
+    private Author author;
     private int year;
 
+    public Book (){}
 
-    public Book(String title, Main.Author author, int year) {
+
+    public Book(String title, Author author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
@@ -16,7 +18,7 @@ public class Book {
         return this.title;
     }
 
-    public Main.Author getAuthor() {
+    public Author getAuthor() {
         return this.author;
     }
 
