@@ -27,9 +27,6 @@ public class Main {
         private String firstName;
         private String lastName;
 
-        public String toString() {
-            return firstName + lastName;
-        }
 
         public String getName() {
             return this.firstName;
@@ -44,6 +41,11 @@ public class Main {
             this.lastName = lastname;
         }
         @Override
+        public String toString() {
+            return firstName + lastName;
+        }
+
+        @Override
         public boolean equals(Object o) {
             if (this == o)
                 return true;
@@ -52,12 +54,11 @@ public class Main {
             Author author = (Author) o;
             return firstName.equals(author.firstName) && lastName.equals(author.lastName);
         }
+
         @Override
         public int hashCode() {
             return Objects.hash(firstName, lastName);
         }
-
-
     }
 
     public static class Book {
@@ -65,9 +66,6 @@ public class Main {
         private Author author;
         private int year;
 
-        public String toString() {
-            return "Название='" + title + " автор" + author + ", год публикации:" + year;
-        }
 
         public Book(String title, Author author, int year) {
             this.title = title;
@@ -92,17 +90,24 @@ public class Main {
             return this.year;
         }
         @Override
+        public String toString() {
+            return "Название='" + title + " автор" + author + ", год публикации:" + year;
+        }
+
+        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Book book = (Book) o;
             return title.equals(book.title) && author.equals(book.author);
         }
+
         @Override
         public int hashCode() {
             return Objects.hash(title, author);
         }
-
-
     }
 }
+
+
+
